@@ -1,4 +1,4 @@
-IMG_NAME="LeoOS"
+IMG_NAME="LeoOS-ros2"
 IMG_VERSION="$(git describe --tags)"
 
 export GIT_REPO="https://github.com/LeoRover/LeoOS"
