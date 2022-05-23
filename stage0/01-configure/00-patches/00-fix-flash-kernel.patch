@@ -1,0 +1,16 @@
+# This patch should be removed once this MR is merged:
+# https://salsa.debian.org/installer-team/flash-kernel/-/merge_requests/33
+# and available in jammy package archive
+--- a/rootfs/usr/share/flash-kernel/functions
++++ b/rootfs/usr/share/flash-kernel/functions
+@@ -1017,8 +1017,8 @@ if [ -L "$kfile" ]; then
+ 	kfile=$(readlink -e "$kfile")
+ fi
+ 
+-if [ -d /sys/firmware/efi ]; then
+-	# skipping when detect EFI
++if ! ischroot && [ -d /sys/firmware/efi ]; then
++	# skipping when detect EFI and we are not running inside a chroot
+ 	echo "System running in EFI mode, skipping."
+ 	exit 0
+ fi

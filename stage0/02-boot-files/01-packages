@@ -1,4 +1,3 @@
 # These packages need to be installed manually after the multistrap procedure
 # to properly set diversions for binaries present in the linux-firmware package
-linux-firmware-raspi2
-rpi-eeprom
+linux-firmware-raspi
