@@ -1,4 +1,4 @@
 python3-rosdep python3-colcon-common-extensions
-ros-foxy-ros-base
-ros-foxy-compressed-image-transport
-ros-foxy-camera-info-manager
+ros-humble-ros-base
+ros-humble-compressed-image-transport
+ros-humble-camera-info-manager
