@@ -1,5 +1,5 @@
 IMG_NAME="LeoOS-ros2"
-IMG_VERSION="$(git describe --tags)"
+IMG_VERSION="alpha"
 
 export GIT_REPO="https://github.com/LeoRover/LeoOS"
 export GIT_HASH="$(git rev-parse HEAD)"
