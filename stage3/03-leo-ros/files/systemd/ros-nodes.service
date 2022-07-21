@@ -6,6 +6,7 @@ PartOf=ros.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/start-ros-nodes
+KillSignal=SIGINT
 
 [Install]
 WantedBy=ros.target
