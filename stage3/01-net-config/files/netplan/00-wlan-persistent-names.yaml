@@ -2,11 +2,11 @@
 network:
   version: 2
   ethernets:
-    wlan_int:
+    link_wlan_int:
       match:
         driver: brcmfmac
       set-name: wlan_int
-    wlan_ext:
+    link_wlan_ext:
       match:
         driver:
           - rt2800usb
