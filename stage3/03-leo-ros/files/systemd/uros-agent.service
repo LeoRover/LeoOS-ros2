@@ -1,0 +1,9 @@
+[Unit]
+Description=Micro-ROS agent
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/start-uros-agent
+
+[Install]
+WantedBy=ros.target

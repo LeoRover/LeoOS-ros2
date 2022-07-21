@@ -1,0 +1,12 @@
+<launch version="0.1.1">
+
+  <arg
+    name="model"
+    default="/etc/ros/urdf/robot.urdf.xacro"
+    description="Absolute path to robot urdf.xacro file" />
+
+  <include file="$(find-pkg-share leo_bringup)/launch/leo_bringup.launch.xml">
+    <arg name="model" value="$(var model)" />
+  </include>
+
+</launch>

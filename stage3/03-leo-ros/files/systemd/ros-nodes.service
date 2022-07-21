@@ -1,0 +1,10 @@
+[Unit]
+Description=ROS nodes
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/start-ros-nodes
+
+[Install]
+WantedBy=ros.target
