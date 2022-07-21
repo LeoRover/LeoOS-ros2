@@ -1,4 +1,4 @@
-ros-noetic-leo-robot
-ros-noetic-raspicam-node
-ros-noetic-rosmon-core
+ros-humble-leo-robot
+ros-humble-web-video-server
+ros-humble-micro-ros-agent
 python3-stm32loader
