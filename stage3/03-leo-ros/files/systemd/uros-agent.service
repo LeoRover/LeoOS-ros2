@@ -1,5 +1,6 @@
 [Unit]
 Description=Micro-ROS agent
+PartOf=ros.target
 
 [Service]
 Type=simple

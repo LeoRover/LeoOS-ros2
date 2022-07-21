@@ -1,6 +1,7 @@
 [Unit]
 Description=ROS nodes
 After=network-online.target
+PartOf=ros.target
 
 [Service]
 Type=simple
