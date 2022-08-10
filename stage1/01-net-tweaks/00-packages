@@ -1,1 +1,1 @@
-network-manager openssh-server net-tools
+network-manager openssh-server net-tools systemd-timesyncd
