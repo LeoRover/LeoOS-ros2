@@ -5,7 +5,8 @@ PartOf=ros.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/start-uros-agent
-Restart=on-abort
+Restart=on-failure
+RestartSec=5
 
 [Install]
 WantedBy=ros.target
