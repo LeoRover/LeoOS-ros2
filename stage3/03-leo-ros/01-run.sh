@@ -8,10 +8,12 @@ install -v -m 644 files/robot.launch.xml "${ROOTFS_DIR}/etc/ros/"
 install -v -m 644 files/robot.urdf.xacro "${ROOTFS_DIR}/etc/ros/urdf/"
 install -v -m 644 files/systemd/* "${ROOTFS_DIR}/etc/systemd/user/"
 install -v -m 755 files/scripts/* "${ROOTFS_DIR}/usr/lib/ros/"
+install -v -m 644 files/aliases "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/.bash_aliases"
 
 on_chroot << EOF
 chown ${FIRST_USER_NAME}:${FIRST_USER_NAME} -R "/etc/ros"
 chown root:root -R "/etc/ros/rosdep"
+chown ${FIRST_USER_NAME}:${FIRST_USER_NAME} /home/${FIRST_USER_NAME}/.bash_aliases
 su - ${FIRST_USER_NAME} -c "systemctl --user enable ros-nodes"
 su - ${FIRST_USER_NAME} -c "systemctl --user enable uros-agent"
 su - ${FIRST_USER_NAME} -c "systemctl --user enable ros.target"
