@@ -4,7 +4,7 @@ PartOf=ros.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/start-uros-agent
+ExecStart=/usr/lib/ros/uros-agent
 Restart=on-failure
 RestartSec=5
 
