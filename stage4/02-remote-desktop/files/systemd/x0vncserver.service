@@ -4,12 +4,11 @@ After=network.target lightdm.service
 
 [Service]
 Type=simple
-User=lightdm
-Environment="DISPLAY=:0"
-Environment="XAUTHORITY=/var/run/lightdm/root/\:0"
-ExecStart=/usr/bin/x0vncserver -fg -SecurityTypes=None -AlwaysShared -rfbport=5900 -localhost=0 --I-KNOW-THIS-IS-INSECURE
-Restart=always
-RestartSec=5
+Environment=HOME=/root
+Environment=XAUTHORITY=/var/run/lightdm/root/:0
+ExecStart=/usr/bin/x0vncserver -display :0 -fg -SecurityTypes=None -AlwaysShared -rfbport=5900 -localhost=0 --I-KNOW-THIS-IS-INSECURE
+Restart=on-failure
+RestartSec=500ms
 
 [Install]
 WantedBy=multi-user.target
