@@ -1,13 +1,17 @@
 --- a/rootfs/boot/firmware/config.txt
 +++ b/rootfs/boot/firmware/config.txt
-@@ -21,6 +21,10 @@ dtoverlay=vc4-fkms-v3d
+@@ -21,6 +21,8 @@ dtoverlay=vc4-kms-v3d
  dtoverlay=miniuart-bt
  disable_overscan=1
  
 +hdmi_force_hotplug=1
-+hdmi_group=2
-+hdmi_mode=85
 +
  # dtparam=i2c_arm=on,i2c_arm_baudrate=400000
  # dtparam=spi=on
  # dtparam=i2s=on
+--- a/rootfs/boot/firmware/cmdline.txt
++++ b/rootfs/boot/firmware/cmdline.txt
+@@ -1 +1 @@
+-net.ifnames=0 dwc_otg.lpm_enable=0 pty.legacy_count=6 console=tty1 root=LABEL=rootfs rootfstype=ext4 rootwait fixrtc fsck.repair=yes init=/sbin/init_firstboot
+\ No newline at end of file
++net.ifnames=0 dwc_otg.lpm_enable=0 pty.legacy_count=6 console=tty1 root=LABEL=rootfs rootfstype=ext4 rootwait fixrtc fsck.repair=yes init=/sbin/init_firstboot video=HDMI-A-1:1280x800@30D
