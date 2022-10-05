@@ -1,13 +1,20 @@
+--- a/rootfs/etc/xdg/autostart/geoclue-demo-agent.desktop
++++ b/rootfs/etc/xdg/autostart/geoclue-demo-agent.desktop
+@@ -8,3 +8,4 @@ NotShowIn=GNOME;
+ NoDisplay=true
+ Terminal=false
+ Type=Application
++Hidden=true
 --- a/rootfs/etc/xdg/autostart/lxqt-powermanagement.desktop
 +++ b/rootfs/etc/xdg/autostart/lxqt-powermanagement.desktop
-@@ -7,6 +7,7 @@ Exec=lxqt-powermanagement
+@@ -6,6 +6,7 @@ Exec=lxqt-powermanagement
  OnlyShowIn=LXQt;
  X-LXQt-Need-Tray=true
  X-LXQt-Module=true
 +Hidden=true
  
- Name[da]=Strømstyring
- Name[de]=LXQt-Energieverwaltung
+ Name=Power Management
+ Name[bg]=Управление на захранването
 --- a/rootfs/etc/xdg/autostart/nm-applet.desktop
 +++ b/rootfs/etc/xdg/autostart/nm-applet.desktop
 @@ -3,6 +3,7 @@ Name=Network
