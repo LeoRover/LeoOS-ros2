@@ -3,3 +3,4 @@ nm-tray network-manager-gnome
 lightdm lightdm-mini-greeter accountsservice
 blueman pulseaudio-module-bluetooth
 lubuntu-artwork papirus-icon-theme kde-style-breeze breeze-cursor-theme
+firefox-esr

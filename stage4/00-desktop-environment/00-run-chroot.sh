@@ -1,0 +1,1 @@
+add-apt-repository -y ppa:mozillateam/ppa
