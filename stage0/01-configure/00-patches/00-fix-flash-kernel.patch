@@ -3,7 +3,16 @@
 # and available in jammy package archive
 --- a/rootfs/usr/share/flash-kernel/functions
 +++ b/rootfs/usr/share/flash-kernel/functions
-@@ -1017,8 +1017,8 @@ if [ -L "$kfile" ]; then
+@@ -897,7 +897,7 @@ handle_dtb() {
+ main() {
+ # Do not run inside an LXC container unless explicitly asked
+ if [ "$FK_FORCE" != "yes" ]; then
+-    if systemd-detect-virt --quiet --container || systemd-detect-virt --quiet --chroot; then
++    if systemd-detect-virt --quiet --container; then
+         exit 0
+     fi
+ fi
+@@ -1019,8 +1019,8 @@ if [ -L "$kfile" ]; then
  	kfile=$(readlink -e "$kfile")
  fi
  
